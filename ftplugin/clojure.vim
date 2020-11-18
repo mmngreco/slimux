@@ -127,6 +127,8 @@ command! SlimuxclojureNsCurrent call Slimux_clojure_ns_current()
 if g:slimux_clojure_keybindings == 1
     execute 'noremap <buffer> <silent> ' . g:slimux_clojure_leader.'d :SlimuxclojureEvalDefun<CR>'
     execute 'noremap <buffer> <silent> ' . g:slimux_clojure_leader.'b :SlimuxclojureEvalBuffer<CR>'
+    execute 'inoremap <buffer> <silent> <C-c><C-c> <ESC>:SlimuxclojureEvalDefun<CR>a'
+    execute 'nnoremap <buffer> <silent> <C-c><C-c> <ESC>:SlimuxclojureEvalDefun<CR>'
     execute 'noremap <buffer> <silent> ' . g:slimux_clojure_leader.'t :SlimuxclojureNsTop<CR>'
     execute 'noremap <buffer> <silent> ' . g:slimux_clojure_leader.'s :SlimuxclojureNsCurrent<CR>'
 endif
