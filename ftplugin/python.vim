@@ -103,16 +103,7 @@ function! SlimuxEscape_python(text)
 
   let l:result = join(l:processed_lines,"")
 
-" <<<<<<< HEAD
-  " add line break to ensure that the code can be executed in REPL
   if len(l:non_processed_lines) > 1
-" =======
-"   "" Return the processed lines
-"   if !l:at_indent0 && l:last_line_empty >= 0
-"       " We ended at indentation and last line was empty
-"       let l:result .= ""
-"   elseif g:slimux_python_use_ipython && l:at_indent0 && l:last_line_empty < 0 && len(l:non_processed_lines) > 1
-" >>>>>>> [python] fix sending lines to ipython
       let l:result .= ""
   endif
 
